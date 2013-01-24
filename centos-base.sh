@@ -17,7 +17,7 @@ PACKAGES="vim-enhanced
 
 baseInstall()
 {
-    yum groupinstall "Development Tools"
+    yum -y groupinstall "Development Tools"
     yum -yq install ${PACKAGES}
 }
 
