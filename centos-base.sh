@@ -17,7 +17,7 @@ PACKAGES="vim-enhanced
 
 baseInstall()
 {
-    yum -y groupinstall "Development Tools"
+    yum -yq groupinstall "Development Tools"
     yum -yq install ${PACKAGES}
 }
 
@@ -27,7 +27,8 @@ enableEpel()
     rpm -Uvh http://mirror.overthewire.com.au/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 
     # and update the system
-    yum -y update
+    echo "Updating the system"
+    yum -yq update
 }
 
 #
@@ -47,7 +48,6 @@ prefetchPython()
     cd $baseDir;
     tar xjf $baseDir/${archiveName};
     cd ${unpArchiveName};
-    ./configure --prefix=$baseDir/python/${unpArchiveName};
 }
 
 enableEpel
