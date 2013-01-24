@@ -9,13 +9,15 @@
 #
 PACKAGES="vim-enhanced
           git
-          readline-devel"
-GROUPS="'Development Tools'"
+          readline-devel
+          libjpeg-devel
+          openldap-devel
+          "
 
 
 baseInstall()
 {
-    yum groupinstall ${GROUPS}
+    yum groupinstall "Development Tools"
     yum -yq install ${PACKAGES}
 }
 
