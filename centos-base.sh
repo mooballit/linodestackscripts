@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 #
 # This stack script installs the base system we need for deploying zope
 # servers. It installs
