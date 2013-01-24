@@ -46,6 +46,6 @@ prefetchPython()
     ./configure --prefix=$baseDir/python/${unpArchiveName};
 }
 
-baseInstall
 enableEpel
-prefetchPython
+baseInstall
+prefetchPython /opt
