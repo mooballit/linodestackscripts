@@ -7,6 +7,10 @@
 #   * additional important packages for python/Zope/Plone
 #   * installs Epel for Centos 6
 #
+# <udf name="PYTHONVERSIONS" label="Python Versions to prefetch" manyOf="2.7.3, 2.6.8, 2.4.6, 2.3.7" default="2.7.3">
+#
+. lib-python.sh
+
 PACKAGES="vim-enhanced
           git
           readline-devel
@@ -29,25 +33,6 @@ enableEpel()
     # and update the system
     echo "Updating the system"
     yum -yq update
-}
-
-#
-# We prefetch all python tarballs in order to be able to just go/compile
-# and install them
-#
-# @param1: directory where to save and compile python
-#
-prefetchPython()
-{
-    baseDir=$1
-    URL=http://python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2
-    archiveName=$(basename ${URL})
-    unpArchiveName=${archiveName/.tar.bz2/}
-
-    wget $URL -O $baseDir/${archiveName};
-    cd $baseDir;
-    tar xjf $baseDir/${archiveName};
-    cd ${unpArchiveName};
 }
 
 enableEpel
