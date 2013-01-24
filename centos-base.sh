@@ -23,7 +23,11 @@ baseInstall()
 
 enableEpel()
 {
+    # enable epel
     rpm -Uvh http://mirror.overthewire.com.au/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+
+    # and update the system
+    yum -y update
 }
 
 #
