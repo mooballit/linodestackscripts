@@ -16,6 +16,7 @@ PACKAGES="vim-enhanced
           readline-devel
           libjpeg-devel
           openldap-devel
+          mysql-devel
           "
 
 
@@ -37,4 +38,4 @@ enableEpel()
 
 enableEpel
 baseInstall
-prefetchPython /opt
+prefetchPython /opt $PYTHONVERSIONS
