@@ -7,7 +7,7 @@
 #   * additional important packages for python/Zope/Plone
 #   * installs Epel for Centos 6
 #
-# <udf name="PYTHONVERSIONS" label="Python Versions to prefetch" manyOf="2.7.3, 2.6.8, 2.4.6, 2.3.7" default="2.7.3">
+# <udf name="pythonversions" label="Python Versions to prefetch" manyOf="2.7.3, 2.6.8, 2.4.6, 2.3.7" default="2.7.3">
 #
 . lib-python.sh
 
