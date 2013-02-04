@@ -17,6 +17,8 @@ PACKAGES="vim-enhanced
           libjpeg-devel
           openldap-devel
           mysql-devel
+          bzip2
+          bzip2-devel
           "
 
 
