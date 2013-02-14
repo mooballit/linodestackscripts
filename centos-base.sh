@@ -19,6 +19,8 @@ PACKAGES="vim-enhanced
           mysql-devel
           bzip2
           bzip2-devel
+          libxml2-devel
+          libxslt-devel
           "
 
 
