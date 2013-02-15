@@ -14,11 +14,15 @@ prefetchPython()
 
     for i in ${versions}; do
         URL=http://python.org/ftp/python/$i/Python-$i.tar.bz2
-        archiveName=$(basename ${URL})
+        archiveName=$(basename ${URL});
+        archDirectory=$(basename ${archiveName});
 
         wget ${URL} -O ${baseDir}/${archiveName};
         cd $baseDir;
         tar xjf $baseDir/${archiveName};
+        cd ${archDirectory};
+        ./configure --prefix=/tmp/${archDirectory,,};
+        make && make install;
     done
 }
 
